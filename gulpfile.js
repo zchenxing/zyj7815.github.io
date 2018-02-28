@@ -56,6 +56,7 @@ gulp.task('img', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
+
 // Watch scss, html, img files
 gulp.task('watch', function () {
     gulp.watch('assets/css/scss/**/*.scss', ['sass']);

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1153,9 +1154,21 @@ footer .copyright {
 
 .post .post-content p {
   margin-top: 0;
+  font-size: 0.8rem;
+  word-break: break-all;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  /** 将对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical;
+  /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2;
+  /** 显示的行数 **/
+  overflow: hidden;
 }
 
-a.older-posts, a.newer-posts {
+a.older-posts,
+a.newer-posts {
   font-size: 18px;
   display: inline-block;
   color: #515151;
