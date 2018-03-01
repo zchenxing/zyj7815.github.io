@@ -776,6 +776,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 h1 {
@@ -798,11 +799,12 @@ blockquote {
 }
 
 pre {
-  padding: 1rem 2rem;
+  padding: .4rem .8rem;
   overflow-x: auto;
 }
 
 pre code {
+  font-size: 14px;
   border: 0;
   padding-right: 0;
   padding-left: 0;
@@ -866,10 +868,11 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  max-width: 1050px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
 
 .post, .article-page {
@@ -1084,6 +1087,32 @@ footer .copyright {
   margin: 0;
 }
 
+.post-tag {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  text-align: center;
+}
+
+.all-posts-tag,
+.all-tags-tag {
+  padding: 0 10px;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+}
+
+.all-posts-tag:hover,
+.all-tags-tag:hover {
+  color: #a0a0a0;
+}
+
 .post {
   width: 100%;
   max-width: 100%;
@@ -1286,6 +1315,10 @@ a.newer-posts:hover {
   text-decoration: underline;
 }
 
+.highlighter-rouge {
+  max-width: 730px;
+}
+
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {
   width: 100%;
@@ -1293,8 +1326,8 @@ a.newer-posts:hover {
   padding: 0 20px 20px;
 }
 
-.blog-tags h1 {
-  font-size: 30px;
+.blog-tags h3 {
+  font-size: 25px;
   text-align: center;
   line-height: 1.3;
   color: #263959;

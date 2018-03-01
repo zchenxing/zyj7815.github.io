@@ -17,6 +17,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 h1 {
@@ -39,10 +40,11 @@ blockquote {
 }
 
 pre {
-  padding: 1rem 2rem;
+  padding: .4rem .8rem;
   overflow-x: auto;
-
+  
   code {
+    font-size: 14px;
     border: 0;
     padding-right: 0;
     padding-left: 0;
@@ -94,10 +96,11 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  max-width: 1050px;
   position: relative;
   margin-left: auto; 
   margin-right: auto;
+    height: 100%;
 }
 
 .post, .article-page {

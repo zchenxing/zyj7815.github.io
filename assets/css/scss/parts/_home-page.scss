@@ -135,6 +135,31 @@ footer {
     }
 }
 
+.post-tag {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top:1px solid $dark-gray;
+    border-bottom:1px solid $dark-gray;
+    text-align: center;
+}
+
+.all-posts-tag,
+.all-tags-tag {
+    padding: 0 10px;
+    text-decoration:none;
+    outline: none;
+    color: black;
+    transition: color .5s;
+    -moz-transition: color .5s;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+
+    &:hover {
+        color: $dark-gray;
+    }
+}
+
 .post {
     width: 100%;
     max-width: 100%;

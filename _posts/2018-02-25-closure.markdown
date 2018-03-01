@@ -1,0 +1,92 @@
+---
+layout: post
+title: JavaScript 对闭包的理解
+date: 2018-02-24 16:00:00 +0800
+description: JavaScript 对闭包的理解
+img: 
+tags: [Javascript] 
+---
+
+说起闭包，在学习JavaScript的时候，对这个概念很不好理解。其实熟悉了闭包以后，感觉就有点像OC中的block。闭包就是允许函数访问局部作用域之外的数据。即使外部函数已经退出，外部函数的变量仍能被内部函数访问。
+
+通俗点说，闭包就是能够访问其他函数内部变量的函数。
+
+因此，闭包的实现需要三个条件：
+- 内部函数用了外部函数的变量
+- 外部函数已经退出
+- 内部函数可以访问
+
+```
+function a(){
+    var x = 0;
+    return function(y){
+        x = x + y;
+        console.log(x);
+    }
+}
+
+var b = a();
+b(10); // 10
+b(10); // 20
+```
+
+
+
+上面代码在执行时，b得到的是闭包对象的引用，虽然a执行完毕后，但是a的活动对象由于闭包的存在没有被销毁，在执行b(10)的时候，然能访问到x变量，再执行b(10)的时候，x=10+10，因为闭包的引用没有被销毁。
+
+这里举一个例子
+
+```
+var sum = 10;
+var fn = function(){
+    console.log('sum='+sum);
+}
+
+(function(f){
+    var sum = 100;
+    f();
+})(fn)
+
+```
+
+面这段代码，sum输出的是10还是100？基础不好的可能不能肯定结果，我们把这段代码的执行顺序说一下。首先定义一个sum变量和fn函数，下面有个自执行函数，将外部函数fn传入到自执行函数。此时，自执行函数执的fn是一个外部函数，fn根据作用域查找sum变量，逐级查找到sum=10，所以输出为10。
+
+但是为什么没有输出100呢？因为100是自执行函数作用域中的变量，fn函数无法访问。如果注释掉全局变量sum，输出sum=undefined。
+
+这里有两短代码片段是阮一峰大大提的思考题
+- 片段一
+
+```
+var name = "The Window";
+var object = {
+    name : "My Object",
+　　getNameFunc : function(){
+　　    return function(){
+　　　　    return this.name;
+　　　　};
+　　}
+};
+alert(object.getNameFunc()());
+```
+
+
+
+- 片段二
+
+```
+var name = "The Window";
+var object = {
+　　name : "My Object",
+　　getNameFunc : function(){
+　　　  var that = this;
+　　　　return function(){
+　　　　　　return that.name;
+　　　　};
+　　}
+};
+alert(object.getNameFunc()());
+```
+
+在代码片段一中，getNameFunc函数return的是一个匿名函数，匿名函数的this是指向全局作用域，所以return的this.name实际是return全局作用域中的name，即name="The Window"。
+
+而在片段二中，定义了变量that，that=this。这个this是getNameFunc函数中的this，而getNameFunc的this指向的是object, that.name指向的是局部作用域object，即name="My Object"
