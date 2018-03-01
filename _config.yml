@@ -2,8 +2,8 @@ title: yuanjie的博客
 description: > # this means to ignore newlines until "baseurl:"
   欢迎来到我的博客。
 permalink: ':title/'
-# baseurl: "/zyj7815.github.io" # the subpath of your site, e.g. /blog
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/zyj7815.github.io" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
