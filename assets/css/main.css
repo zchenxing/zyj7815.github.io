@@ -447,10 +447,6 @@ template {
 .highlighter-rouge {
   color: #ce887b;
   font-weight: 400;
-  border: 1px solid #607D8B;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  padding: 0.1rem 0.5rem;
 }
 
 .highlight .hll {
@@ -797,6 +793,7 @@ blockquote {
   padding-left: 1.1rem;
   margin-left: 1rem;
   font-style: italic;
+  font-size: .9rem;
   color: #ada8a8;
 }
 
@@ -871,6 +868,8 @@ table tfoot td {
 .wrapper {
   max-width: 1250px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post, .article-page {
@@ -949,8 +948,8 @@ table tfoot td {
 }
 
 .about img:hover {
-  -webkit-transform: scale3d(0.9, 0.9, 1);
-          transform: scale3d(0.9, 0.9, 1);
+  -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
 }
 
 .about .author-name {
@@ -1194,6 +1193,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+  font-size: 1rem;
 }
 
 .header-page {

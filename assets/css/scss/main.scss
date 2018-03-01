@@ -34,6 +34,7 @@ blockquote {
   padding-left: 1.1rem;
   margin-left: 1rem;
   font-style: italic;
+  font-size: .9rem;
   color: #ada8a8;
 }
 
@@ -95,6 +96,8 @@ table tfoot td {
 .wrapper {
   max-width: 1250px;
   position: relative;
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 .post, .article-page {
