@@ -2,21 +2,6 @@
 layout: main 
 ---
 
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-    owner: 'zyj7815',
-    repo: 'https://github.com/zyj7815/zyj7815.github.io.git',
-    oauth: {
-        client_id: '44a7ff57fd8f8506575f',
-        client_secret: 'b623a1021bc0a04e662882f82e7a535b3145691e',
-        },
-    })
-    gitment.render('container')
-</script>
-
-
 <article class="article-page">
     <div class="page-content">
         {% if page.img %}
@@ -36,6 +21,7 @@ layout: main
                 </div>
             </header>
             {{page.content | markdownify}}
+            
             <div class="page-footer">
                
                 <div class="page-tag">
