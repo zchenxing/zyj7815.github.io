@@ -23,7 +23,9 @@ layout: main
             {{page.content | markdownify}}
             
             <div class="page-footer">
-               
+               <div class="page-share">
+                   <a href="javascript:;" id="back">返回</a>
+               </div>
                 <div class="page-tag">
                     {% for tag in page.tags %}
                     <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
@@ -37,3 +39,10 @@ layout: main
     <!-- End Page Content -->
 </article>
 <!-- End Article Page -->
+
+<script>
+    var back = document.getElementById("back")
+    back.addEventListener("click", function() {
+        window.history.back(-1)
+    })
+</script>

@@ -149,14 +149,14 @@ footer {
     padding: 0 10px;
     text-decoration:none;
     outline: none;
-    color: black;
+    color: $dark-gray;
     transition: color .5s;
     -moz-transition: color .5s;
     -webkit-transition: color .5s;
     -o-transition: color .5s;
 
     &:hover {
-        color: $dark-gray;
+        color: $body-color;
     }
 }
 

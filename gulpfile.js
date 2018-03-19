@@ -43,6 +43,12 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('assets/css'));
 });
 
+
+gulp.task('js', function() {
+    return gulp.src('assets/js/*.js')
+        .pipe(gulp.dest('assets/js'))
+})
+
 // Compression images
 gulp.task('img', function() {
 	return gulp.src('assets/img/**/*')
@@ -62,6 +68,7 @@ gulp.task('watch', function () {
     gulp.watch('assets/css/scss/**/*.scss', ['sass']);
     gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
     gulp.watch('assets/img/**/*', ['img']);
+    gulp.watch('assets/js/*.js',['js'])
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_pages/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

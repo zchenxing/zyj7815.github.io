@@ -1100,7 +1100,7 @@ footer .copyright {
   padding: 0 10px;
   text-decoration: none;
   outline: none;
-  color: black;
+  color: #a0a0a0;
   transition: color .5s;
   -moz-transition: color .5s;
   -webkit-transition: color .5s;
@@ -1109,7 +1109,7 @@ footer .copyright {
 
 .all-posts-tag:hover,
 .all-tags-tag:hover {
-  color: #a0a0a0;
+  color: #515151;
 }
 
 .post {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 组件化开发
+title: 实现组件化开发
 date: 2018-02-24 16:00:00 +0800
 description: JavaScript 对闭包的理解
 img: 
