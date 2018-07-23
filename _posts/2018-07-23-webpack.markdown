@@ -1,10 +1,10 @@
 ---
 layout: post
-title: webpack4.0教程
+title: webpack4.0基础
 date: 2018-07-23 16:00:00 +0800
-description: webpack
+description: webpack4.0
 img: 20180723/20180723-1.png
-tags: [Javsscript]
+tags: [Javascript] 
 ---
 
 
@@ -14,6 +14,7 @@ tags: [Javsscript]
 3. plugins：扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑来改变构建结果或做你想要的事情。
 4. Module：模块，webpack一切皆模块，一个模块对应一个文件。
 5. Chunk：代码块，一个 Chunk 由多个模块组合而成，用于代码合并与分割。 Loader：模块转换器，用于把模块原内容按照需求转换成新内容。
+
 
 
 ## webpack执行流程
@@ -48,6 +49,7 @@ npm i webpack webpack-cli -D
 */
 
 ```
+
 
 
 ##### development mode默认
@@ -103,7 +105,8 @@ module.exports = {
 ```
 
 
-- ### webpack-html-plugin
+- ## webpack-html-plugin
+
 创建`index.html`，将生成的js动态引入到`index.html`中，我们需要安装插件`webpack-html-plugin`。
 
 在`webpack.config.js`中引入插件
@@ -224,6 +227,7 @@ use是从右到左执行，执行webpack打包时，先执行`css-loader`处理c
 
 
 - 把es6转为es5
+
 > 安装:  npm i babel-loader babel-core babel-preset-env -D
 
 ```
@@ -252,9 +256,11 @@ module: {
 ```
 
 - css3 添加浏览器前缀
+
 > 安装postcss-loader和autoprefixer。`npm i postcss-loader autoprefixer -D`
 
 在目录下新建posscss.config.js
+
 ```
 module.exports = {
     plugins: [
@@ -267,6 +273,7 @@ module.exports = {
 意思是在postcss-loader中引入autoprefixer插件
 
 在`webpack.config.js`中修改配置
+
 ```
 module: {
     rules: [
@@ -304,6 +311,7 @@ module: {
 
 
 - 安装 less-loader 插件
+
 > 安装: npm i less-loader less -D
 
 安装完成之后，配置webpack.config.js
@@ -321,6 +329,7 @@ module: {
 ```
 
 - 安装 html-loader
+
 ```
 module: {
     rules: [
@@ -336,6 +345,7 @@ module: {
 
 - 修改模板后缀，为模板赋值
 > 安装ejs-loader
+
 ```
 module: {
     rules: [
@@ -351,6 +361,7 @@ module: {
 
 - file-loader 静态资源加载
 安装 `npm i file-loader -D`
+
 ```
 module: {
     rules: [
@@ -368,8 +379,6 @@ module: {
     ]
 }
 ```
-query部分的配置，是为打包的图片设置一个自定义的存储路径和文件名称。
+    query部分的配置，是为打包的图片设置一个自定义的存储路径和文件名称。
 
 当然还有很多loader，参见文档。
-
-
