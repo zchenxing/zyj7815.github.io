@@ -16,11 +16,6 @@ tags: [Javascript]
 5. Chunk：代码块，一个 Chunk 由多个模块组合而成，用于代码合并与分割。 Loader：模块转换器，用于把模块原内容按照需求转换成新内容。
 
 
-
-## webpack执行流程
-![ webpack执行流程](https://note.youdao.com/yws/public/resource/dfc531ff259bc48a2f1e1ba0086a5b05/xmlnote/WEBRESOURCEa685f4bd2184b26ac84319b04dd622e9/5547)
-
-
 ---
 
 环境：`node > 8.2`
