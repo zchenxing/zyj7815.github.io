@@ -3,7 +3,7 @@ layout: post
 title: ES知识点梳理
 date: 2018-08-13 17:02:00 +0800
 description: ES知识点梳理
-img: 
+img: common/js-1.png # Add image post (optional)
 tags: [Javascript]
 ---
 

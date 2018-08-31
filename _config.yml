@@ -9,7 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: yuanjie # add your name
-author-img: my-head.jpg # add your photo
+author-img: my-head.jpeg # add your photo
 about-author: 我是一名iOS开发/前端开发工程师，目标是成为一名全栈开发工程师。 # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
